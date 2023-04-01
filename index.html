@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Python Project</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href=“...“ integrity=“..." crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="script.js" async></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1>ML "maskformer-swin-large-ade"</h1>
+        <h2>MaskFormer</h2>
+        <p>MaskFormer model trained on ADE20k semantic segmentation (large-sized version, Swin backbone). It was
+            introduced in the paper Per-Pixel Classification is Not All You Need for Semantic Segmentation and first
+            released in this repository.
+            Disclaimer: The team releasing MaskFormer did not write a model card for this model so this model card has
+            been written by the Hugging Face team.</p>
+        <h2>Model description</h2>
+        <p>MaskFormer addresses instance, semantic and panoptic segmentation with the same paradigm: by predicting a set
+            of masks and corresponding labels. Hence, all 3 tasks are treated as if they were instance segmentation.</p>
+
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Bitte Bild hochladen (jpeg, png)</label>
+                <input type="file" accept="image/png, image/jpeg" class="form-control-file" id="image" name="image"
+                    onchange="checkFiles(this.files);">
+            </div>
+        </form>
+        <div id="answerPart" style="visibility: hidden;">
+            <p><b>Answer:</b>
+            <div id="answer"></div>
+            </p>
+            <p id="previewPart"><b>Analyzed Image:</b>
+            <p><img id="preview" width="300" src="#" alt="preview" /></p>
+            </p>
+        </div>
+    </div>
+</body>
