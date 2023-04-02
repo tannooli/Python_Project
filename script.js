@@ -1,7 +1,3 @@
-// Preview
-if (file) {
-  preview.src = URL.createObjectURL(files[0])
-  }
   
 //Interface
 const formular = document.getElementById("image-input");
