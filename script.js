@@ -1,4 +1,8 @@
-  
+ //Node16
+ runs:
+  using: 'node16'
+  main: 'script.js'
+
 //Interface
 const formular = document.getElementById("image-input");
 const bildEingabe = document.getElementById("image-upload");
