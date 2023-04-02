@@ -22,19 +22,20 @@
         <h2>Intended uses & limitations</h2>
         <p>You can use this particular checkpoint for semantic segmentation. See the model hub to look for other fine-tuned versions on a task that interests you.</p>
         <h2>Image Upload</h2>
-        <form>
-            <div class="form-group">
-                <label for="exampleFormControlFile1">Please upload your image (jpeg, png)</label>
-                <input type="file" accept="image/png, image/jpeg" class="form-control-file" id="image" name="image"
-                    onchange="checkFiles(this.files);">
+        <form id="image-input">
+            <div>
+                <label>Please upload your image (jpeg, png)</label>
+                <input type="file" id="image-upload">
+                <button type="submit">Upload</button>
             </div>
         </form>
-        <div id="answerPart" style="visibility: hidden;">
-            <p><b>Answer:</b>
-            <div id="answer"></div>
+        <div id="answerPart">
+            <p><b>Image Segmentation:</b>
+            <div id="response"></div>
+            <br>
+            <p><b>Analyzed Image:</b>
+                <p><img id="preview" width="300" src="#" alt="preview" /></p>                
             </p>
-            <p id="previewPart"><b>Analyzed Image:</b>
-            <p><img id="preview" width="300" src="#" alt="preview" /></p>
             </p>
         </div>
     </div>
