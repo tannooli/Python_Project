@@ -1,7 +1,5 @@
 from flask import Flask
-from flask import jsonify
 from flask.helpers import send_file
-from flask.helpers import send_from_directory
 
 app = Flask(__name__, static_url_path='/', static_folder='PYTHON_PROJEKT')
 

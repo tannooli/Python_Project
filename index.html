@@ -6,33 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Python Project</title>
-    <link rel="stylesheet" href=“...“ integrity=“..." crossorigin="anonymous">
+    <script src="script.js" async></script>
+    <!-- <link rel="stylesheet" href="stylesheet.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="script.js" async></script>
 </head>
 
 <body>
     <div class="container-fluid">
         <h1>ML "maskformer-swin-large-ade"</h1>
-        <h2>MaskFormer</h2>
-        <p>MaskFormer model trained on ADE20k semantic segmentation (large-sized version, Swin backbone). <br>It was introduced in the paper Per-Pixel Classification is Not All You Need for Semantic Segmentation and first released in this repository.</p>
-            <p><b>Disclaimer</b>: The team releasing MaskFormer did not write a model card for this model so this model card has been written by the Hugging Face team.</p>
-        <h2>Model description</h2>
-        <p>MaskFormer addresses instance, semantic and panoptic segmentation with the same paradigm: by predicting a set of masks and corresponding labels. Hence, all 3 tasks are treated as if they were instance segmentation.</p>
+        <h3>MaskFormer</h3>
+        <p class="lead">MaskFormer model trained on ADE20k semantic segmentation (large-sized version, Swin backbone). <br>It was
+            introduced in the paper Per-Pixel Classification is Not All You Need for Semantic Segmentation and first
+            released in this repository.</p>
+        <p><b>Disclaimer</b>: The team releasing MaskFormer did not write a model card for this model so this model card
+            has been written by the Hugging Face team.</p>
+        <h3>Model description</h3>
+        <p>MaskFormer addresses instance, semantic and panoptic segmentation with the same paradigm: by predicting a set
+            of masks and corresponding labels. Hence, all 3 tasks are treated as if they were instance segmentation.</p>
         <img src="Sources/maskformer_architecture.png" width="900">
         <h2>Intended uses & limitations</h2>
-        <p>You can use this particular checkpoint for semantic segmentation. See the model hub to look for other fine-tuned versions on a task that interests you.</p>
-        <h2>Image Upload</h2>
+        <p>You can use this particular checkpoint for semantic segmentation. See the model hub to look for other
+            fine-tuned versions on a task that interests you.</p>
+        <h3>Image Upload</h3>
         <form id="image-input">
-            <div>
-                <label>Please upload your image (jpeg, png)</label>
-                <input type="file" id="image-upload">
-                <button type="submit">Upload</button>
+            <div class="container-md">
+                <label for="image-upload" class="form-label">Please upload your image</label>
+                <input class="form-control" type="file" id="image-upload">
+            </div>
+            <div class="container-sm">
+                <button type="submit" class="btn btn-secondary btn-lg">Upload</button>
             </div>
         </form>
+        <br>
         <div id="answerPart">
-            <p><b>Image Segmentation:</b>
+            <p><h3>Image Segmentation:</h3>
             <div id="response"></div>
             </p>
         </div>
