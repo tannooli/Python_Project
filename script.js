@@ -23,7 +23,3 @@ formular.addEventListener("submit", async function (event) {
     })
     .catch(error => console.error(error));
 })
-
-
-
-
